@@ -1,5 +1,5 @@
 // // // problem 01
-// // function totalFine( fare ) {
+// // function finalScoreFine( fare ) {
 // //     if (!isNaN(parseInt(fare))){
 // //         if( fare <= 0 || typeof fare === 'string'){
 // //             return "Invalid"
@@ -11,7 +11,7 @@
 // //         return "Invalid"
 // //     }
 // // }
-// // const fine = totalFine(50)
+// // const fine = finalScoreFine(50)
 // // console.log(fine)
 
 
@@ -43,12 +43,12 @@
 // problem 03
 // function  bestTeam( player1, player2 ) {
 //     if( typeof player1 === "object" & typeof player2 === "object"){
-//         let totalFoulByPlayer1Team = player1.foul + player1.cardR + player1.cardY
-//         let totalFoulByPlayer2Team = player2.foul + player2.cardR + player2.cardY
+//         let finalScoreFoulByPlayer1Team = player1.foul + player1.cardR + player1.cardY
+//         let finalScoreFoulByPlayer2Team = player2.foul + player2.cardR + player2.cardY
          
-//         if(totalFoulByPlayer1Team > totalFoulByPlayer2Team){
+//         if(finalScoreFoulByPlayer1Team > finalScoreFoulByPlayer2Team){
 //             return player2.name
-//         }else if(totalFoulByPlayer1Team === totalFoulByPlayer2Team){
+//         }else if(finalScoreFoulByPlayer1Team === finalScoreFoulByPlayer2Team){
 //             return "Tie"
 //         }else{
 //             return player1.name
@@ -106,5 +106,41 @@
 
 
 
-// problem 
+// problem 05
+function  resultReport( marks ) {
+    if(Array.isArray(marks)){
+        let restul = {
+            finalScore : 0,
+            pass : 0,
+            fail : 0
+        }
+        for( let i = 0 ; i < marks.length; i++){
+            if(marks[i] >= 40){
+                restul.pass += 1
+            }else{
+                restul.fail += 1
+            }
+            restul.finalScore += marks[i]
+        }
+        if( marks.length > 1){
+            restul.finalScore = Math.round( restul.finalScore / marks.length)
+        }
+        return restul
+    }else{
+        return 'Invalid'
+    }
+}
+
+
+const fine = resultReport([])
+const fine2 = resultReport([98, 87, 67, 91, 92, 33, 87])
+const fine3 = resultReport([99, 87, 67, 12 ,87])
+const fine4 = resultReport([99])
+const fine5 = resultReport(100)
+console.log(fine)
+console.log(fine2)
+console.log(fine3)
+console.log(fine4)
+console.log(fine5)
+
 

@@ -58,3 +58,26 @@ function  isSame(arr1 , arr2 ) {
 }
 
 // problem 05
+function  resultReport( marks ) {
+    if(Array.isArray(marks)){
+        let result = {
+            finalScore : 0,
+            pass : 0,
+            fail : 0
+        }
+        for( let i = 0 ; i < marks.length; i++){
+            if(marks[i] >= 40){
+                result.pass += 1
+            }else{
+                result.fail += 1
+            }
+            result.finalScore += marks[i]
+        }
+        if( marks.length > 1){
+            result.finalScore = Math.round( result.finalScore / marks.length)
+        }
+        return result
+    }else{
+        return 'Invalid'
+    }
+}
