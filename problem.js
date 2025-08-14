@@ -73,3 +73,38 @@
 
 
 // problem 04
+// function  isSame(arr1 , arr2 ) {
+//           if(Array.isArray(arr1) &&  Array.isArray(arr2)){
+//             if( arr1.length === arr2.length){
+//             for ( let i = 0; i < arr1.length; i++){
+//                 if( arr1[i] !== arr2[i])
+//                     return false
+//             }
+//             return true
+//             }else{
+//                 return false
+//             }
+//           }else{
+//             return "Invalid"
+//           }
+// }
+
+// const fine = isSame([1, 2, 3] , [1 , 2 , 3])
+// const fine2 = isSame([34 , 5 ,7 ,9 ], [ 34 , 5 , 7 ])
+// const fine3 = isSame([1, undefined , 3] , [1,null ,3])
+// const fine4 = isSame([1 , 4 , 5], [1 , 4 , 5])
+// const fine5 = isSame([1 , "4" , 4] ,[1 , 4  , 4])
+// const fine6 = isSame([2 , 5 , 6] ,256)
+// const fine7 = isSame({data: [2 , 5 , 6] } , [2 , 5 , 6])
+// console.log(fine)
+// console.log(fine2)
+// console.log(fine3)
+// console.log(fine4)
+// console.log(fine5)
+// console.log(fine6)
+// console.log(fine7)
+
+
+
+// problem 
+
