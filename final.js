@@ -22,3 +22,21 @@ function  onlyCharacter( str ) {
     }
       
 }
+
+// problem 03
+function  bestTeam( player1, player2 ) {
+    if( typeof player1 === "object" & typeof player2 === "object"){
+        let totalFoulByPlayer1Team = player1.foul + player1.cardR + player1.cardY
+        let totalFoulByPlayer2Team = player2.foul + player2.cardR + player2.cardY
+        if(totalFoulByPlayer1Team > totalFoulByPlayer2Team){
+            return player2.name
+        }else if(totalFoulByPlayer1Team === totalFoulByPlayer2Team){
+            return "Tie"
+        }else{
+            return player1.name
+        }
+    }else{
+        return "Invalid"
+    }
+}
+
